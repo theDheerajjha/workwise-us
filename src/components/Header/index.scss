@@ -1,0 +1,38 @@
+/* styles.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: #fff;
+  }
+  
+  .logo img {
+    width: 100px; /* Adjust the size of the logo as needed */
+  }
+  
+  .search-bar input[type='text'] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-bar button {
+    margin-left: 0.5rem;
+    padding: 5px 10px;
+    font-weight: 400;
+    border-radius: 5px;
+    background-color: fffff;
+    color: 000000;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-bar button:hover {
+    font-weight: 400;
+    border-radius: 5px;
+    color: white;
+    background-color: #d35400;
+  }
+  
