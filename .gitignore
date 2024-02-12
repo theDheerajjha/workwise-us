@@ -11,6 +11,9 @@
 # production
 /build
 
+#DKJ
+/src/app-config.js 
+
 # misc
 .DS_Store
 .env.local
