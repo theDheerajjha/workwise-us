@@ -33,7 +33,7 @@ const List = () => {
 
   return (
     <>
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap space-around">
         {
              list.map((item:any, index:any) =>(
               <Card key={index} >
