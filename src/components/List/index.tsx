@@ -2,8 +2,6 @@ import React from "react";
 import { AuthData, hData } from "../../app-config";
 import { useState, useEffect } from "react";
 import "./index.scss";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
 const List = () => {
   const [list, setList] = useState<any>([]);
 
@@ -33,22 +31,22 @@ const List = () => {
 
   return (
     <>
-      <div className="d-flex flex-wrap space-around">
-        {
-             list.map((item:any, index:any) =>(
-              <Card key={index} >
-                  <Card.Header>{item.MatchedObjectDescriptor.OrganizationName || 'unknown'}</Card.Header>
-                  <Card.Body>
-                    <Card.Title>Special title treatment</Card.Title>
-                    <Card.Text>
-                      With supporting text below as a natural lead-in to additional
-                      content.
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-                </Card>
-             ))
-      }
+      <div className="d-flex flex-wrap justify-content-center">
+        {list.map((item: any, index: any) => (
+          <div className="card-container">
+            <div className="card">
+              <div className="card-header">{item.MatchedObjectDescriptor.OrganizationName || 'unknown'}</div>
+              <div className="card-body">
+                <h5 className="card-title">Special title treatment</h5>
+                <p className="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+                <button className="btn-primary">Go somewhere</button>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );
