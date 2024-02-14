@@ -1,42 +1,54 @@
 .banner-container {
   height: 180px !important;
-  z-index: 500; 
-  background: linear-gradient(180deg, #268562, transparent);
-  .banner-text{
+  z-index: 500;
+  background: linear-gradient(90deg, #268562, transparent);
+  .banner-text {
     font-weight: bold !important;
     font-size: 20px;
     color: white;
     text-align: center;
     margin: 10px; /* Adjust as needed */
   }
-
-
-  .search-bar{
+  .banner-text:hover {
+    font-weight: bold !important;
+    font-size: 20px;
+    color: rgb(236, 135, 135);
+    text-align: center;
+  }
+  .search-bar {
     padding-top: 30px;
     width: 80%;
-    input{
-        height: 50px;
-        width: 66%;
+    font-size: 18px;
+    input {
+      border-style: none;
+      height: 50px;
+      width: 66%;
+      border-radius: 7px;
     }
-    button{
-        margin-left: 0.5rem;
+    input:hover{
         border-style: none;
         height: 50px;
-        width: 15%;
-        font-weight: 400;
-        border-radius: 7px;
-        color: #268562;
-        background-color: white;
-
+        border-radius: 10px;
+        box-shadow: #515855;
+    }
+    button {
+      margin-left: 0.5rem;
+      border-style: none;
+      height: 50px;
+      width: 15%;
+      font-weight: 400;
+      border-radius: 7px;
+      color: #268562;
+      background-color: white;
     }
     button:hover {
-        margin-left: 0.5rem;
-        height: 50px;
-        width: 15%;
-        font-weight: 400;
-        border-radius: 5px;
-        color: white;
-        background-color: #14573f;
-      }
+      margin-left: 0.5rem;
+      height: 50px;
+      width: 15%;
+      font-weight: 400;
+      border-radius: 5px;
+      color: white;
+      background-color: #14573f;
+    }
   }
 }

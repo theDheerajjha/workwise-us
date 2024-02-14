@@ -46,9 +46,24 @@
         color: #4fb38e;
         font-size: 15px;
         font-weight: 500;
-        padding: 8px 16px;
+        padding: 7px 15px;
         cursor: pointer;
         border: 2px solid #4fb38e !important;
+        border-radius: 5px;
+      }
+      .btn-primary:hover {
+        background-color: white;
+        color: #4fb38e;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 7px 15px;
+        border-radius: 3px;
+        border: 2px solid white !important;
+        background-color: #4fb38e;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.5s ease;
       }
     }
   }
