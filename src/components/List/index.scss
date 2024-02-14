@@ -1,15 +1,25 @@
+.main-div {
+    background-color: white;
+  background-size: 100vw 70vh !important;
+  position: sticky;
+  background-repeat: no-repeat !important;
+  background-position: top;
+  border-top-left-radius : 20px;
+  border-top-right-radius : 20px;
+}
 .card-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 
   .card {
-    background-color: #ecde60;
-    border: 2px solid #f4c765;
-    border-radius: 4px;
+    z-index: 1;
+    background-color: white;
+    border: 1px solid #dad6d0;
+    border-radius: 20px;
     width: 300px;
     margin: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(121, 120, 120, 0.1);
 
     .card-header {
       padding: 10px;
@@ -32,12 +42,13 @@
       }
 
       .btn-primary {
-        background-color: #007bff;
-        color: #ffffff;
-        border: none;
+        background-color: white;
+        color: #4fb38e;
+        font-size: 15px;
+        font-weight: 500;
         padding: 8px 16px;
-        border-radius: 4px;
         cursor: pointer;
+        border: 2px solid #4fb38e !important;
       }
     }
   }

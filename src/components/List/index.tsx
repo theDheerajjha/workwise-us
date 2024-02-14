@@ -31,7 +31,7 @@ const List = () => {
 
   return (
     <>
-      <div className="d-flex flex-wrap justify-content-center">
+      <div className="d-flex main-div flex-wrap justify-content-center">
         {list.map((item: any, index: any) => (
           <div className="card-container">
             <div className="card">

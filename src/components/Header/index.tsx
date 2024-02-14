@@ -1,17 +1,19 @@
 import React from "react";
 import "./index.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faUserTie } from "@fortawesome/free-solid-svg-icons";
+
 // import logo from '../logo.png';
 
 const Header = () => {
   return (
     <>
       <header>
-        <div className="logo">WW </div>
-        <div className="search-bar">
-          <input type="text" placeholder="Search..." />
-          <button type="button">Search</button>
+        <div >
+          <FontAwesomeIcon className="logo" icon={faUserTie} />
         </div>
-      </header>{" "}
+        <div>WorkWi$e</div>
+      </header>
     </>
   );
 };
