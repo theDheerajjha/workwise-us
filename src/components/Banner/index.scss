@@ -7,7 +7,7 @@
     font-size: 20px;
     color: white;
     text-align: center;
-    margin: 10px; /* Adjust as needed */
+    margin: 10px;
   }
   .banner-text:hover {
     font-weight: bold !important;
@@ -25,11 +25,11 @@
       width: 66%;
       border-radius: 7px;
     }
-    input:hover{
-        border-style: none;
-        height: 50px;
-        border-radius: 10px;
-        box-shadow: #515855;
+    input:hover {
+      border-style: none;
+      height: 50px;
+      border-radius: 10px;
+      box-shadow: #515855;
     }
     button {
       margin-left: 0.5rem;
