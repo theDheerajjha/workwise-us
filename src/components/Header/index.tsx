@@ -1,15 +1,14 @@
 import React from "react";
 import "./index.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserTie } from "@fortawesome/free-solid-svg-icons";
+import dp from "../../Assets/Profile_DP_White_Dheeraj.jpg";
 const Header = () => {
   return (
     <>
       <header>
-        <div>
-          <FontAwesomeIcon className="logo" icon={faUserTie} />
-        </div>
         <div>WorkWi$e - US</div>
+        <div>
+          <img src={dp} className="dp" alt="DK" />
+        </div>
       </header>
     </>
   );
