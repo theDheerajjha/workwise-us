@@ -1,6 +1,7 @@
 import React from "react";
 import { AuthData, hData } from "../../app-config";
 import { useState, useEffect } from "react";
+import Pagination from "../Pagination";
 import "./index.scss";
 const List = () => {
   const [list, setList] = useState<any>([]);
@@ -48,6 +49,7 @@ const List = () => {
           </div>
         ))}
       </div>
+      <Pagination totalPages={10} currentPage={3} />
     </>
   );
 };
