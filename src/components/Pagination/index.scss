@@ -1,0 +1,24 @@
+.pagination-container {
+    background-color: inherit !important;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .prev-button,
+  .next-button {
+    padding: 10px 20px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9a9f9a;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: #45a049;
+  }
+  
