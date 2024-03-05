@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthData, hData } from "../../app-config";
-import { useState, useEffect } from "react";
 import Pagination from "../Pagination";
 import "./index.scss";
+
 const List = () => {
   const [list, setList] = useState<any>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setList(hData);
     // getJobList();
   }, []);
 
+  const handleApply = (jobId: string) => {
+    // Navigate to the job description page
+    navigate(`/job/${jobId}`);
+    
+  };
   const getJobList = () => {
     fetch("https://data.usajobs.gov/api/search", {
       method: "GET",
@@ -29,12 +36,11 @@ const List = () => {
         console.log(err);
       });
   };
-
   return (
     <>
       <div className="d-flex main-div flex-wrap justify-content-center">
-        {list.map((item: any, index: any) => (
-          <div className="card-container">
+        {list.map((item: any) => (
+          <div className="card-container" key={item.id}>
             <div className="card">
               <div className="card-header">{item.MatchedObjectDescriptor.OrganizationName || 'unknown'}</div>
               <div className="card-body">
@@ -43,7 +49,7 @@ const List = () => {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <button className="btn-primary">Go somewhere</button>
+                <button className="btn-primary" onClick={() => handleApply(item.id)}>Apply</button>
               </div>
             </div>
           </div>
