@@ -9,18 +9,17 @@ import JobDescription from "./components/JobDescription/index";
 
 function App() {
   return (
-    <Router>
-      <div>
+    <>
+      <Router>
         <Header />
-        <Bannner></Bannner>
-
+        <Bannner />
         <Routes>
-          <Route path="/" element={<List  />} />
+          <Route path="/" element={<List />} />
           <Route path="/job/:id" element={<JobDescription />} />
         </Routes>
-        <Footer />
-      </div>
-    </Router>
+      </Router>
+      <Footer />
+    </>
   );
 }
 
