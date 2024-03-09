@@ -40,7 +40,7 @@ const List = () => {
     <>
       <div className="d-flex main-div flex-wrap justify-content-center">
         {list.map((item: any) => (
-          <div className="card-container" key={item.id}>
+          <div className="card-container" key={item.MatchedObjectId}>
             <div className="card">
               <div className="card-header">{item.MatchedObjectDescriptor.OrganizationName || 'unknown'}</div>
               <div className="card-body">
@@ -49,7 +49,7 @@ const List = () => {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <button className="btn-primary" onClick={() => handleApply(item.id)}>Apply</button>
+                <button className="btn-primary" onClick={() => handleApply(item.MatchedObjectId)}>Apply</button>
               </div>
             </div>
           </div>

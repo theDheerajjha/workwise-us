@@ -6,7 +6,7 @@ const JobDescription = () => {
   const { id } = useParams<{ id: string }>();
 
   return (
-    <div>
+    <div className="jd-div">
       <div className="back-button">
         <Link to="/" className="btn-primary">
           Back
