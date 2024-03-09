@@ -1,69 +1,98 @@
 .main-div {
-    background-color: white;
+  background-color: white;
   background-size: 100vw 70vh !important;
   position: sticky;
   background-repeat: no-repeat !important;
   background-position: top;
-  border-top-left-radius : 20px;
-  border-top-right-radius : 20px;
-}
-.card-container {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: center;
 
-  .card {
-    z-index: 1;
-    background-color: white;
-    border: 1px solid #dad6d0;
-    border-radius: 20px;
-    width: 300px;
-    margin: 10px;
-    box-shadow: 0 2px 4px rgba(121, 120, 120, 0.1);
+  .job-card-main {
+    border: 2px solid #000000;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 15px;
+    width: 450px;
+  }
 
-    .card-header {
-      padding: 10px;
-      background-color: #f0f0f0;
-      border-bottom: 1px solid #dddddd;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-    }
+  .job-card-upper {
+    display: flex;
+    // align-items: center;
+  }
 
-    .card-body {
-      padding: 20px;
+  .jobs-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
 
-      .card-title {
-        font-size: 1.25rem;
-        margin-bottom: 10px;
-      }
+  .job-title-exp {
+    flex: 1;
+  }
 
-      .card-text {
-        margin-bottom: 10px;
-      }
+  .job-designation {
+    font-weight: 600;
+    font-size: 1.2em;
+  }
 
-      .btn-primary {
-        background-color: white;
-        color: #4fb38e;
-        font-size: 15px;
-        font-weight: 500;
-        padding: 7px 15px;
-        cursor: pointer;
-        border-radius: 5px;
-      }
-      .btn-primary:hover {
-        background-color: white;
-        color: #4fb38e;
-        font-size: 16px;
-        font-weight: 500;
-        padding: 7px 15px;
-        border-radius: 3px;
-        border: 2px solid white !important;
-        background-color: #4fb38e;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        transition: transform 0.5s ease;
-      }
-    }
+  .job-company-name {
+    margin-top: 5px;
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+  .job-details-short {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  .experience-required,
+  .expected-salary,
+  .job-location {
+    flex: 1;
+    font-size: 0.8em;
+    margin-right: 10px;
+  }
+
+  .job-card-lower {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .apply-before-text {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #666;
+  }
+
+  .apply-button-div {
+    flex: 1;
+    text-align: right;
+  }
+
+  .apply-button {
+    background-color: #f3f7f4;
+    color: #256b46ef;
+    border: 1px solid #256b46ef;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 0.9em;
+    cursor: pointer;
+  }
+
+  .apply-button:hover {
+    color: white;
+    border: none;
+    background-color: #256b46ef;
   }
 }
