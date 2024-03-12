@@ -83,7 +83,6 @@ const JobDescription: React.FC = () => {
   const job: Job | undefined = hData.find(
     (item) => item.MatchedObjectId === id
   );
-
   return (
     <div className="jd-div">
       <div className="back-button">
@@ -94,25 +93,67 @@ const JobDescription: React.FC = () => {
       {job && (
         <>
           <div className="job-header">
-            <img src={job_log} alt="Job Icon" className="job-icon" />
             <div className="job-details">
-              <h1 className="job-title">{job.MatchedObjectDescriptor.PositionTitle}</h1>
-              <p className="job-organization">{job.MatchedObjectDescriptor.OrganizationName}</p>
-              <p className="job-location">Location: {job.MatchedObjectDescriptor.PositionLocationDisplay}</p>
-              <p className="job-schedule">Position Type: {job.MatchedObjectDescriptor.PositionSchedule[0].Name}</p>
-              <p className="job-salary">Salary Range: ${job.MatchedObjectDescriptor.PositionRemuneration[0].MinimumRange} - ${job.MatchedObjectDescriptor.PositionRemuneration[0].MaximumRange} per {job.MatchedObjectDescriptor.PositionRemuneration[0].Description}</p>
-              <p className="job-category">Category: {job.MatchedObjectDescriptor.JobCategory.map(category => category.Name).join(", ")}</p>
-              <p className="job-description">Description: {job.MatchedObjectDescriptor.QualificationSummary}</p>
+              <div className="header-box">
+                <img src={job_log} alt="Job Icon" className="job-icon" />
+                <div className="title-organization">
+                  <h1 className="job-title">
+                    {job.MatchedObjectDescriptor.PositionTitle}
+                  </h1>
+                  <p className="job-organization">
+                    {job.MatchedObjectDescriptor.OrganizationName}
+                  </p>
+                </div>
+              </div>
+
+              <p className="job-location">
+                Location: {job.MatchedObjectDescriptor.PositionLocationDisplay}
+              </p>
+              <p className="job-schedule">
+                Position Type:{" "}
+                {job.MatchedObjectDescriptor.PositionSchedule[0].Name}
+              </p>
+              <p className="job-salary">
+                Salary Range: $
+                {
+                  job.MatchedObjectDescriptor.PositionRemuneration[0]
+                    .MinimumRange
+                }{" "}
+                - $
+                {
+                  job.MatchedObjectDescriptor.PositionRemuneration[0]
+                    .MaximumRange
+                }{" "}
+                per{" "}
+                {
+                  job.MatchedObjectDescriptor.PositionRemuneration[0]
+                    .Description
+                }
+              </p>
+              <p className="job-category">
+                Category:{" "}
+                {job.MatchedObjectDescriptor.JobCategory.map(
+                  (category) => category.Name
+                ).join(", ")}
+              </p>
+              <p className="job-description">
+                <strong>Description: </strong>
+                {job.MatchedObjectDescriptor.QualificationSummary}
+              </p>
             </div>
           </div>
           <div className="job-description">
             <h2>Description</h2>
-            <p className="job-summary">{job.MatchedObjectDescriptor.UserArea.Details.JobSummary}</p>
+            <p className="job-summary">
+              {job.MatchedObjectDescriptor.UserArea.Details.JobSummary}
+            </p>
             <h3>Major Duties</h3>
             <ul className="major-duties">
-              {job.MatchedObjectDescriptor.UserArea.Details.MajorDuties.map((duty, index) => (
-                <li key={index}>{duty}</li>
-              ))}
+              {job.MatchedObjectDescriptor.UserArea.Details.MajorDuties.map(
+                (duty, index) => (
+                  <li key={index}>{duty}</li>
+                )
+              )}
             </ul>
           </div>
           <div className="how-to-apply">
@@ -129,11 +170,26 @@ const JobDescription: React.FC = () => {
           </div>
           <div className="additional-info">
             <h2>Additional Information</h2>
-            <p><strong>Education:</strong> {job.MatchedObjectDescriptor.UserArea.Details.Education}</p>
-            <p><strong>Requirements:</strong> {job.MatchedObjectDescriptor.UserArea.Details.Requirements}</p>
-            <p><strong>Evaluations:</strong> {job.MatchedObjectDescriptor.UserArea.Details.Evaluations}</p>
-            <p><strong>Benefits:</strong> {job.MatchedObjectDescriptor.UserArea.Details.Benefits}</p>
-            <p><strong>Agency Contact Email:</strong> {job.MatchedObjectDescriptor.UserArea.Details.AgencyContactEmail}</p>
+            <p>
+              <strong>Education:</strong>{" "}
+              {job.MatchedObjectDescriptor.UserArea.Details.Education}
+            </p>
+            <p>
+              <strong>Requirements:</strong>{" "}
+              {job.MatchedObjectDescriptor.UserArea.Details.Requirements}
+            </p>
+            <p>
+              <strong>Evaluations:</strong>{" "}
+              {job.MatchedObjectDescriptor.UserArea.Details.Evaluations}
+            </p>
+            <p>
+              <strong>Benefits:</strong>{" "}
+              {job.MatchedObjectDescriptor.UserArea.Details.Benefits}
+            </p>
+            <p>
+              <strong>Agency Contact Email:</strong>{" "}
+              {job.MatchedObjectDescriptor.UserArea.Details.AgencyContactEmail}
+            </p>
           </div>
         </>
       )}

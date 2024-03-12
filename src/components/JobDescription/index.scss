@@ -1,102 +1,116 @@
 /* index.scss */
 
 .jd-div {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    padding: 30px;
-    background-color: #f4f4f4;
-  }
-  
-  .back-button {
-    margin-bottom: 20px;
-  }
-  
-  .back-button .btn-primary {
-    padding: 10px 20px;
-    color: #0056b3;
-    background-color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 1px solid #0056b3;
-    transition: background-color 0.3s ease;
-    font-weight: 500;
-  }
-  
-  .back-button .btn-primary:hover {
-    color: white;
-    background-color: #3b6b9e;
-  }
-  
-  .job-header {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  padding: 20px 20px 20px 40px;
+  background-color: #f4f4f4;
+}
+.header-box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  .title-organization {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column;
   }
-  
-  .job-icon {
-    width: 50px;
-    height: auto;
-    margin-right: 20px;
-  }
-  
-  .job-title {
-    font-size: 24px;
-    margin: 0;
-    color: #33906b;
-  }
-  
-  .job-details {
-    flex-grow: 1;
-  }
-  
-  .job-organization,
-  .job-location,
-  .job-schedule,
-  .job-salary,
-  .job-category {
-    margin: 5px 0;
-  }
-  
-  .job-description {
-    margin-bottom: 20px;
-  }
-  
-  .job-summary {
-    margin-bottom: 10px;
-  }
-  
-  .major-duties {
-    list-style-type: disc;
-    margin-left: 20px;
-  }
-  
-  .how-to-apply {
-    margin-bottom: 20px;
-  }
-  
-  .apply-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .apply-button:hover {
-    background-color: #218838;
-  }
-  
-  .additional-info {
-    margin-bottom: 20px;
-  }
-  
-  .additional-info p {
-    margin: 5px 0;
-  }
-  
-  .additional-info strong {
-    font-weight: bold;
-  }
-  
+}
+.back-button {
+  margin-bottom: 40px;
+}
+
+.back-button .btn-primary {
+  padding: 10px 20px;
+  color: #0056b3;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #0056b3;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.back-button .btn-primary:hover {
+  color: white;
+  background-color: #3b6b9e;
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.job-icon {
+  width: 70px;
+  height: auto;
+  border-radius: 0;
+  margin-right: 20px;
+}
+
+.job-title {
+  font-size: 24px;
+  margin: 0;
+  color: #33906b;
+}
+
+.job-details {
+  flex-grow: 1;
+}
+
+.job-organization {
+  font-weight: 500;
+  font-size: 1em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 5px 0 15px 0;
+}
+
+.job-location,
+.job-schedule,
+.job-salary,
+.job-category {
+  margin: 5px 0;
+}
+
+.job-description {
+  margin-bottom: 20px;
+}
+
+.job-summary {
+  margin-bottom: 10px;
+}
+
+.major-duties {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.how-to-apply {
+  margin-bottom: 20px;
+}
+
+.apply-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #218838;
+}
+
+.additional-info {
+  margin-bottom: 20px;
+}
+
+.additional-info p {
+  margin: 5px 0;
+}
+
+.additional-info strong {
+  font-weight: bold;
+}
