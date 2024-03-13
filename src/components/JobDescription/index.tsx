@@ -143,10 +143,6 @@ const JobDescription: React.FC = () => {
             </div>
           </div>
           <div className="job-description">
-            <h2>Description</h2>
-            <p className="job-summary">
-              {job.MatchedObjectDescriptor.UserArea.Details.JobSummary}
-            </p>
             <h3>Major Duties</h3>
             <ul className="major-duties">
               {job.MatchedObjectDescriptor.UserArea.Details.MajorDuties.map(
