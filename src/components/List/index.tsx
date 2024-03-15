@@ -34,7 +34,7 @@ const List = () => {
                 <div className="job-details-short">
                   {/* <div className="experience-required"> {item.MatchedObjectDescriptor.UserArea.Details.RequiredExperience}</div> */}
                   <div className="expected-salary">
-                    {`Salary Range: $${item.MatchedObjectDescriptor.PositionRemuneration[0].MinimumRange} - $${item.MatchedObjectDescriptor.PositionRemuneration[0].MaximumRange} per ${item.MatchedObjectDescriptor.PositionRemuneration[0].Description}`}
+                    {`Salary Range: $${item.MatchedObjectDescriptor.PositionRemuneration[0].MinimumRange} - $${item.MatchedObjectDescriptor.PositionRemuneration[0].MaximumRange}${item.MatchedObjectDescriptor.PositionRemuneration[0].Description}`}
                   </div>
                   <div className="job-location">{item.MatchedObjectDescriptor.PositionLocationDisplay}</div>
                 </div>
