@@ -32,7 +32,7 @@ const List = () => {
                 <div className="job-company-name">{item.MatchedObjectDescriptor.OrganizationName}</div>
 
                 <div className="job-details-short">
-                  <div className="experience-required"> {item.MatchedObjectDescriptor.UserArea.Details.RequiredExperience}</div>
+                  {/* <div className="experience-required"> {item.MatchedObjectDescriptor.UserArea.Details.RequiredExperience}</div> */}
                   <div className="expected-salary">
                     {`Salary Range: $${item.MatchedObjectDescriptor.PositionRemuneration[0].MinimumRange} - $${item.MatchedObjectDescriptor.PositionRemuneration[0].MaximumRange} per ${item.MatchedObjectDescriptor.PositionRemuneration[0].Description}`}
                   </div>
@@ -42,7 +42,7 @@ const List = () => {
             </div>
             <br />
             <div className="job-card-lower">
-              <div className="apply-before-text">Apply Before :</div>
+              <div className="apply-before-text"><span>Apply Before:</span> {new Date(item.MatchedObjectDescriptor.ApplicationCloseDate).toLocaleDateString()}</div>
               <div className="apply-button-div">
                 {" "}
                 <button

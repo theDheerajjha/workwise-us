@@ -44,6 +44,7 @@
   .job-company-name {
     margin-top: 5px;
     font-size: 1em;
+    color:rgb(132, 130, 130) !important;
     font-weight: 500;
   }
 
@@ -69,8 +70,11 @@
   }
 
   .apply-before-text {
+    span {
+      font-weight: 400;
+    }
     font-size: 0.9em;
-    font-weight: 400;
+    font-weight: 500;
     color: #666;
   }
 
