@@ -8905,3 +8905,5 @@ export const hData = [
       RelevanceRank: 0,
     },
   ];
+  
+  export default hData;
