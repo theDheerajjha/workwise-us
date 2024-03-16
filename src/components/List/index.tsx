@@ -22,35 +22,48 @@ const List = () => {
     <>
       <div className="d-flex main-div flex-wrap justify-content-center">
         {list.map((item: any) => (
-          <div className="job-card-main" key={item.MatchedObjectId}>
-            <div className="job-card-upper">
-              <div className="jobs-logo">
-                <img src={job_log} alt="loading..." />
-              </div>
-              <div className="job-title-exp">
-                <div className="job-designation">{item.MatchedObjectDescriptor.PositionTitle}</div>
-                <div className="job-company-name">{item.MatchedObjectDescriptor.OrganizationName}</div>
-
-                <div className="job-details-short">
-                  {/* <div className="experience-required"> {item.MatchedObjectDescriptor.UserArea.Details.RequiredExperience}</div> */}
-                  <div className="expected-salary">
-                    {`Salary Range: $${item.MatchedObjectDescriptor.PositionRemuneration[0].MinimumRange} - $${item.MatchedObjectDescriptor.PositionRemuneration[0].MaximumRange} ${item.MatchedObjectDescriptor.PositionRemuneration[0].Description}`}
+          <div className="job-card">
+            <div className="content-card" key={item.MatchedObjectId}>
+              <div className="job-card-upper">
+                <div className="jobs-logo">
+                  <img src={job_log} alt="loading..." />
+                </div>
+                <div className="job-title-exp">
+                  <div className="job-designation">
+                    {item.MatchedObjectDescriptor.PositionTitle}
                   </div>
-                  <div className="job-location">{item.MatchedObjectDescriptor.PositionLocationDisplay}</div>
+                  <div className="job-company-name">
+                    {item.MatchedObjectDescriptor.OrganizationName}
+                  </div>
+
+                  <div className="job-details-short">
+                    {/* <div className="experience-required"> {item.MatchedObjectDescriptor.UserArea.Details.RequiredExperience}</div> */}
+                    <div className="expected-salary">
+                      {`Salary Range: $${item.MatchedObjectDescriptor.PositionRemuneration[0].MinimumRange} - $${item.MatchedObjectDescriptor.PositionRemuneration[0].MaximumRange} ${item.MatchedObjectDescriptor.PositionRemuneration[0].Description}`}
+                    </div>
+                    <div className="job-location">
+                      {item.MatchedObjectDescriptor.PositionLocationDisplay}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <br />
-            <div className="job-card-lower">
-              <div className="apply-before-text"><span>Apply Before:</span> {new Date(item.MatchedObjectDescriptor.ApplicationCloseDate).toLocaleDateString()}</div>
-              <div className="apply-button-div">
-                {" "}
-                <button
-                  className="btn-primary apply-button"
-                  onClick={() => handleApply(item.MatchedObjectId)}
-                >
-                  Apply
-                </button>
+              <br />
+              <div className="job-card-lower">
+                <div className="apply-before-text">
+                  <span>Apply Before:</span>{" "}
+                  {new Date(
+                    item.MatchedObjectDescriptor.ApplicationCloseDate
+                  ).toLocaleDateString()}
+                </div>
+                <div className="apply-button-div">
+                  {" "}
+                  <button
+                    className="btn-primary apply-button"
+                    onClick={() => handleApply(item.MatchedObjectId)}
+                  >
+                    Apply
+                  </button>
+                </div>
               </div>
             </div>
           </div>
