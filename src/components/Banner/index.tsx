@@ -10,7 +10,7 @@ const Banner = () => {
           <p>Over 5,00,000+ jobs to explore</p>
         </div>
         <div className="search-bar  d-flex justify-content-center">
-          <input type="text" placeholder="Search..."/>
+          <input type="text" placeholder="Search..." />
           <button type="button" disabled={true}>
             {" "}
             <FontAwesomeIcon className="logo" icon={faSearch} />
