@@ -69,7 +69,7 @@ const List = () => {
           </div>
         ))}
       </div>
-      <Pagination totalPages={10} currentPage={3} />
+      {/* <Pagination totalPages={10} currentPage={3} /> */}
     </>
   );
 };
