@@ -13,7 +13,6 @@ const List = () => {
   }, []);
 
   const handleApply = (jobId: string) => {
-    // Navigate to the job description page
     navigate(`/job/${jobId}`);
   };
 
@@ -36,7 +35,6 @@ const List = () => {
                   </div>
 
                   <div className="job-details-short">
-                    {/* <div className="experience-required"> {item.MatchedObjectDescriptor.UserArea.Details.RequiredExperience}</div> */}
                     <div className="expected-salary">
                       {`Salary Range: $${item.MatchedObjectDescriptor.PositionRemuneration[0].MinimumRange} - $${item.MatchedObjectDescriptor.PositionRemuneration[0].MaximumRange} ${item.MatchedObjectDescriptor.PositionRemuneration[0].Description}`}
                     </div>
@@ -68,7 +66,6 @@ const List = () => {
           </div>
         ))}
       </div>
-      {/* <Pagination totalPages={10} currentPage={3} /> */}
     </>
   );
 };
