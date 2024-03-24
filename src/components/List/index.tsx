@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { hData } from "../../temp-data";
-import Pagination from "../Pagination";
 import job_log from "../../Assets/job_icon.png";
 import "./index.scss";
 
