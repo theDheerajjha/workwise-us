@@ -4,15 +4,18 @@
   padding: 20px 20px 20px 40px;
   background-color: #f4f4f4;
 }
+
 .header-box {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+
   .title-organization {
     display: flex;
     flex-direction: column;
   }
 }
+
 .back-button {
   margin-bottom: 40px;
 }
