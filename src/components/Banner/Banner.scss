@@ -1,0 +1,127 @@
+.banner {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: var(--spacing-xl) 0;
+  color: white;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xl);
+  opacity: 0.9;
+}
+
+.search-container {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: 0 4px 6px var(--shadow-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.search-box {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.search-input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border-color);
+  transition: border-color var(--transition-fast);
+
+  &:focus-within {
+    border-color: var(--primary-color);
+  }
+
+  svg {
+    color: var(--text-secondary);
+    margin-right: var(--spacing-sm);
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    background: none;
+    color: var(--text-primary);
+    font-size: 1rem;
+    padding: var(--spacing-sm) 0;
+
+    &::placeholder {
+      color: var(--text-secondary);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+
+  &:hover {
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+  }
+
+  svg {
+    font-size: 1rem;
+  }
+}
+
+.popular-searches {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+
+  span {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+} 
