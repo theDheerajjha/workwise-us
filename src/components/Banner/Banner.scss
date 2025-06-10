@@ -36,6 +36,7 @@
 
     .typing-text {
       display: inline-block;
+      color: #639ded !important;
     }
 
     .cursor {
@@ -211,6 +212,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -221,16 +223,20 @@
   from {
     transform: translateY(0);
   }
+
   to {
     transform: translateY(-100%);
   }
 }
 
 @keyframes blink {
-  from, to {
+
+  from,
+  to {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
-} 
+}
