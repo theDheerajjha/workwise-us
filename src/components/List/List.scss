@@ -1,3 +1,12 @@
+.job-listings {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
 .job-list {
   padding: clamp(1rem, 5vw, 2rem);
   max-width: 1200px;
