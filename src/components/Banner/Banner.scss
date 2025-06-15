@@ -6,15 +6,18 @@
   margin-bottom: 1.5rem;
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
 
 .banner-content {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .banner-text {
@@ -36,6 +39,7 @@
 
     .typing-text {
       display: inline-block;
+      color: #639ded !important;
     }
 
     .cursor {
@@ -211,6 +215,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -221,16 +226,20 @@
   from {
     transform: translateY(0);
   }
+
   to {
     transform: translateY(-100%);
   }
 }
 
 @keyframes blink {
-  from, to {
+
+  from,
+  to {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
-} 
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuilding, faMapMarkerAlt, faClock, faDollarSign, faLink, faShare } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding, faMapMarkerAlt, faClock, faDollarSign, faLink, faShare, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import './JobDescription.scss';
 
 const JobDescription: React.FC = () => {
@@ -48,7 +48,7 @@ const JobDescription: React.FC = () => {
     <div className="job-description">
       <div className="job-header">
         <div className="company-info">
-          <img src={job.logo} alt={`${job.company} logo`} className="company-logo" />
+          <FontAwesomeIcon icon={faBriefcase} />
           <div className="job-title-section">
             <h1>{job.title}</h1>
             <div className="company-name">
