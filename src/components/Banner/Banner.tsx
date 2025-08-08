@@ -9,12 +9,13 @@ const useTypingEffect = (text: string, typingSpeed: number = 100, deletingSpeed:
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    let pauseTimeout: ReturnType<typeof setTimeout> | undefined;
     const timeout = setTimeout(() => {
       if (!isDeleting && currentIndex < text.length) {
         setDisplayText(text.slice(0, currentIndex + 1));
         setCurrentIndex(currentIndex + 1);
       } else if (!isDeleting && currentIndex === text.length) {
-        setTimeout(() => setIsDeleting(true), pauseTime);
+        pauseTimeout = setTimeout(() => setIsDeleting(true), pauseTime);
       } else if (isDeleting && currentIndex > 0) {
         setDisplayText(text.slice(0, currentIndex - 1));
         setCurrentIndex(currentIndex - 1);
@@ -23,7 +24,12 @@ const useTypingEffect = (text: string, typingSpeed: number = 100, deletingSpeed:
       }
     }, isDeleting ? deletingSpeed : typingSpeed);
 
-    return () => clearTimeout(timeout);
+    return () => {
+      clearTimeout(timeout);
+      if (pauseTimeout) {
+        clearTimeout(pauseTimeout);
+      }
+    };
   }, [currentIndex, isDeleting, text, typingSpeed, deletingSpeed, pauseTime]);
 
   return displayText;
